@@ -1,0 +1,26 @@
+﻿Построение начато 11.03.2016 10:08:03.
+     1>Проект "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\postfix_tests\postfix_tests.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\..\..\gtest /I..\..\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\tests\test_list.cpp ..\..\..\..\tests\test_main.cpp ..\..\..\..\tests\test_postfix.cpp ..\..\..\..\tests\test_stack.cpp
+         test_stack.cpp
+     1>c:\users\user\desktop\копии лаб\new_repository_lab3_postfix — копия(последняя версия)\tests\test_stack.cpp(127): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+     1>c:\users\user\desktop\копии лаб\new_repository_lab3_postfix — копия(последняя версия)\tests\test_stack.cpp(145): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+         test_postfix.cpp
+         test_main.cpp
+         test_list.cpp
+     1>c:\users\user\desktop\копии лаб\new_repository_lab3_postfix — копия(последняя версия)\tests\test_list.cpp(198): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+     1>c:\users\user\desktop\копии лаб\new_repository_lab3_postfix — копия(последняя версия)\tests\test_list.cpp(216): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_tests.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug gtest.lib postfix_lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_tests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_tests.lib" /MACHINE:X86 Debug\test_list.obj
+         Debug\test_main.obj
+         Debug\test_postfix.obj
+         Debug\test_stack.obj
+         "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\gtest.lib"
+         "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_lib.lib"
+         postfix_tests.vcxproj -> C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_tests.exe
+     1>Построение проекта "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\postfix_tests\postfix_tests.vcxproj" завершено (целевые объекты Rebuild).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:09.35
