@@ -14,6 +14,9 @@ private:
 	int IsOperator(char) const;
 	int IsArgument(char) const;
 	//////////////////////////////
+	char* Enter (string str, char*alfavit);
+	string ReadyString(string str);
+	string Newstring(string str, char* chisla, char* alfavit);
 	bool GetTwoOperands (RT & op1, RT & op2);
 	void Compute (char op);
 public:
@@ -22,7 +25,7 @@ public:
 
 	string PostfixForm(string);
 	///////////////////////////////////
-	void Calcul(void);
+	RT Calcul (string str);
 };
 
 template<class VT>
@@ -84,7 +87,7 @@ string Postfix<VT>:: PostfixForm(string str)
 					while ((!operators.IsEmpty()) && (operators.GetValue() != '('))
 						arguments.Push(operators.Pop());
 					if (operators.IsEmpty())
-						throw ("Error");
+						throw exception ("Not correct data");//*
 					operators.Pop();
 				}
 				else
@@ -117,7 +120,7 @@ string Postfix<VT>:: PostfixForm(string str)
 			arguments.Push(operators.Pop());
 
 	if (arguments.IsEmpty())
-		throw ("Error");
+		throw exception ("Not correct data");//*
 
 	while (!arguments.IsEmpty())
 		operators.Push(arguments.Pop());
@@ -130,7 +133,7 @@ string Postfix<VT>:: PostfixForm(string str)
 	{
 		value = str_result[i];
 		if (value == '(')
-			throw ("Error");
+			throw exception ("Not correct data");//*
 	}
 
 	return str_result;
@@ -138,33 +141,111 @@ string Postfix<VT>:: PostfixForm(string str)
 
 ////////////////////////////////////
 template<class VT>
-void Postfix<VT>:: Calcul(void)
-{
-	char c;
-	RT newop;
-	while(cin>>c, c != '=')
+string Postfix<VT>:: ReadyString(string str)
+{//создает массив, в котором различные буквы,(были введены пользователем)
+	const int N = str.length();
+	char *alfavit = new char [N]; //различные буквы
+	for (int j=0; j<N; j++)
+		alfavit[j]  = '0';
+	
+	int c=0; int res = 1;
+	char ch;
+	for (unsigned int i=0; i< str.length(); i++)
+	{///заполняет масс различными буквами, без повторений
+		ch = str[i];
+		if (IsArgument(ch)){
+			res = 1;
+			for (unsigned int j=0; j< str.length(); j++)
+				if (alfavit[j]==ch){
+					res = 0;
+					break;
+				}
+			if (res==1){
+				alfavit[c] = ch;
+				c++;
+			}
+		}
+	}///
+
+	char* chisla = Enter(str,alfavit);
+	string newstring = Newstring(str,chisla,alfavit);
+	delete [] alfavit;
+	delete [] chisla;
+	return newstring;
+}
+
+template<class VT>
+char* Postfix<VT>:: Enter(string str, char *alfavit)
+{//числа, кот вводятся пользователем, запоминаются//*нужен alfavit
+	const int N = str.length();
+	char *chisla = new char [N];  //числа, которые подставятся вместо букв
+	for (int j=0; j<N; j++)
+		chisla[j]  = 'z';
+
+	char ch;
+	for (int i=0; i<N; i++)
 	{
-		switch(c)
+		ch = alfavit[i];
+		if (ch!='0')
 		{
-			case '+':
-			case '-':
-			case '*':
-			case '/':
-				Compute(c);
-				break;
-			default://не оператор вернуть символ
-				cin.putback(c);
-				cin>> newop;//читать оператор передать в стек
-				S.Push(newop);
-				break;
+			cout << "Enter " << ch << ": ";
+			cin >> chisla[i];
 		}
 	}
-	if (!S.IsEmpty())
-	{
-		cout <<"Result: "<<( S.Pop() )<< endl; 
+	return chisla;
+}
+
+template<class VT>
+string Postfix<VT>:: Newstring(string str, char* chisla, char* alfavit)
+{
+	const int N = str.length();
+	int j=0;
+	while (chisla[j]!='z'){//берем из alfavita
+		for (int i=0; i<N; i++)
+			if (chisla[j]!='0'){
+				if (alfavit[j]==str[i])
+					str[i] = chisla[j];
+			}
+			j++;
 	}
+	return str;
+}
+
+template<class VT>
+RT Postfix<VT>:: Calcul(string str)
+{
+	char ch;
+	string s1 = ReadyString(str);
+	RT newop;
+	for (unsigned int i=0; i < s1.length(); i++) 
+	{
+		ch = s1[i];
+		if((ch!=' ')&&(ch != '='))
+			switch(ch)
+			{
+				case '+':
+				case '-':
+				case '*':
+				case '/':
+					Compute(ch);
+					break;
+				default://не оператор вернуть символ
+					cin.putback(ch);
+					cin>> newop;//читать оператор передать в стек
+					S.Push(newop);
+					break;
+			}
+	}
+
+	RT Result;
+	if (!S.IsEmpty())
+		Result = S.Pop();
+	if (!S.IsEmpty())
+		cout << "error Calcul"<< endl;
 	while (!S.IsEmpty())
 		S.Pop();//очистить стек
+
+	return Result;
 }
 
 template<class VT>

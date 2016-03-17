@@ -1,0 +1,16 @@
+﻿Построение начато 11.03.2016 10:07:58.
+     1>Проект "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\postfix_lib\postfix_lib.vcxproj" в узле 4 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\..\..\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\src\postfix.cpp ..\..\..\..\src\stack.cpp
+         stack.cpp
+         postfix.cpp
+         Создание кода...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_lib.lib" /NOLOGO Debug\postfix.obj
+         Debug\stack.obj
+         postfix_lib.vcxproj -> C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_lib.lib
+     1>Построение проекта "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\postfix_lib\postfix_lib.vcxproj" завершено (целевые объекты Rebuild).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.68

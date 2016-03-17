@@ -1,0 +1,15 @@
+﻿Построение начато 11.03.2016 10:08:03.
+     1>Проект "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\sample_stack\sample_stack.vcxproj" в узле 3 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\..\..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\samples\sample_stack.cpp
+         sample_stack.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\sample_stack.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug postfix_lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\sample_stack.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\sample_stack.lib" /MACHINE:X86 Debug\sample_stack.obj
+         "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\gtest.lib"
+         "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\postfix_lib.lib"
+         sample_stack.vcxproj -> C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\Debug\sample_stack.exe
+     1>Построение проекта "C:\Users\User\Desktop\копии лаб\New_repository_lab3_postfix — копия(последняя версия)\sln\vc12\lab3_postfix\sample_stack\sample_stack.vcxproj" завершено (целевые объекты Rebuild).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:03.46
