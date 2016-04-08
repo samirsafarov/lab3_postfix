@@ -1,0 +1,9 @@
+﻿  test_main.cpp
+  test-stack.cpp
+c:\users\samir\downloads\лабы\лаба ани\lab3-postfix-master (1)\lab3-postfix-master\test\test-stack.cpp(81): warning C4553: ==: оператор не имеет результата; возможно, имелся в виду "="
+c:\users\samir\downloads\лабы\лаба ани\lab3-postfix-master (1)\lab3-postfix-master\test\test-stack.cpp(92): warning C4553: ==: оператор не имеет результата; возможно, имелся в виду "="
+  test-postfix.cpp
+  test-list.cpp
+c:\users\samir\downloads\лабы\лаба ани\lab3-postfix-master (1)\lab3-postfix-master\test\test-list.cpp(21): warning C4002: слишком много фактических параметров для макроопределения "ASSERT_NO_THROW"
+  Создание кода...
+  test.vcxproj -> C:\Users\Samir\Downloads\ЛАБЫ\лаба ани\lab3-postfix-master (1)\lab3-postfix-master\sln\vc14\x64\Debug\test.exe
